@@ -1,0 +1,18 @@
+<form method="POST" action="/edit_user/{{ user.id }}">
+    <div class="form-group">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}">
+    </div>
+    <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" class="form-control" id="password" name="password" value="{{ user.password }}">
+    </div>
+    <div class="form-group">
+        <label for="role">Rol</label>
+        <select class="form-control" id="role" name="role">
+            <option value="1" {% if user.role == 1 %}selected{% endif %}>Rol 1</option>
+            <option value="2" {% if user.role == 2 %}selected{% endif %}>Rol 2</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

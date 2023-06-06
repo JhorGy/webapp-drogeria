@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Usuario</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Agregar Usuario</h1>
+    <form method="post" action="/add_user">
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" required><br>
+        <label for="role">Rol:</label>
+        <select name="role" id="role" class="form-control">
+            <option value="2">Administrador</option>
+            <option value="1">Usuario</option>
+        </select><br>
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>
